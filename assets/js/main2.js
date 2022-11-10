@@ -6,7 +6,7 @@ btnInput.addEventListener("click", function () {
   textChange.textContent = "";
   textoName.textContent =
     inputWord.charAt(0).toUpperCase() + inputWord.slice(1);
-  const palabraContador = {};
+  let palabraContador = {};
   for (let i = 0; i < inputWord.length; i++) {
     const letra = inputWord[i];
     if (!palabraContador[letra]) {
@@ -15,10 +15,10 @@ btnInput.addEventListener("click", function () {
       palabraContador[letra]++;
     }
   }
-  for (let i = 0; i < Object.keys(palabraContador).length; i++) {
-    textChange.textContent = `Tiene ${
-      Object.values(palabraContador)[i]
-    } ${Object.keys(palabraContador)[i].toUpperCase()} ${
+  const valores = Object.values(palabraContador).reverse();
+  const llaves = Object.keys(palabraContador).reverse();
+  for (let i = 0; i < valores.length; i++) {
+    textChange.textContent = `Tiene ${valores[i]} ${llaves[i].toUpperCase()}, ${
       textChange.textContent
     }`;
   }
