@@ -2,7 +2,7 @@ const textChange = document.getElementById("text-change");
 const btnInput = document.getElementById("btn-input");
 const textoName = document.getElementById("text-name");
 btnInput.addEventListener("click", function () {
-  const inputWord = document.getElementById("text-input").value;
+  const inputWord = document.getElementById("text-input").value.toUpperCase();
   textChange.textContent = "";
   textoName.textContent =
     inputWord.charAt(0).toUpperCase() + inputWord.slice(1);

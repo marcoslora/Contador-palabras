@@ -4125,3 +4125,8 @@ body.is-mobile.landing #footer {
   margin-left: auto;
   text-align: center;
 }
+@media screen and (max-width: 600px) {
+  #text-input {
+    margin-left: -10%;
+  }
+} ;
